@@ -1,0 +1,53 @@
+.user-information {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+}
+.user-information>.img {
+    height: 300px;
+    width: 240px;
+    background-color: #222629;
+    background-position: center;
+    background-size: cover;
+}
+.user-information>.info>p {
+    font-size: 18px;
+}
+.user-information>.info>.full-name {
+    font-size: 42px;
+    text-transform: uppercase;
+}
+.user-information>.info>form>input.activate {
+    background-color: #28B463;
+}
+.user-information>.info>form>input.deactivate {
+    background-color: red;
+}
+
+.change-password-form {
+    border: 2px solid #28B463;
+}
+.change-password-form>form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+.change-password-form>form>input {
+    padding: 8px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 0;
+    border: 1px solid #222629;
+}
+.change-password-form>form>input[type="submit"] {
+    background-color: #222629;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+.change-password-form>form>input[type="submit"]:hover {
+    font-weight: bolder;
+}
+.change-password-form>form>input[name="confirm"] {
+    border-left: none;
+}

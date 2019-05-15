@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="administration/fragments/head :: head">Layout head fragment</th:block>
+    <link rel="stylesheet" href="#">
+</head>
+<body>
+<div class="wrapper">
+    <div th:replace="administration/fragments/nav :: nav"><!--nav bar--></div>
+    <div class="main">
+        <!--start-->
+
+        <div class="main-item message" th:if="${messages != null}" th:each="message : ${messages}">
+            <p th:text="${message}"></p>
+        </div>
+
+        <div class="main-item">
+            <h1>Welcome to administration page of "bid"</h1>
+            <p>Operations management indicates to the administration of business
+                practices to make the most elevated amount of productivity conceivable
+                inside an association. Operations management is concerned with changing
+                over materials and labour into produce and services as productively as
+                possible to amplify the profit of an organisation. Operations management
+                groups plan the technique for change of inputs (materials, work, exclusive
+                data, etc.) into outputs (merchandise, administrations, value added items,
+                and so on.) that is most advantageous to the organisation. Operations management
+                groups attempt to equally adjust costs with revenue to accomplish the most
+                astounding net operating profit possible. Operations management is
+                essential for the efficient functionality and provision of health services.
+                Because the health care sector is currently undergoing a considerable amount
+                of reform, the jobs of those who manage health care operations are changing
+                as well. One of the first areas of focus for operations managers is
+                controlling costs. The current health care system overuses expensive,
+                technological and emergency-based treatment. High costs from care that
+                remains uncompensated due to patients being uninsured. A prevalence of
+                services in expensive settings creates a burden on taxpayers, health
+                insurance holders and health care institutions themselves. The goal
+                for operations managers is to help strike a balance between necessary
+                high-tech treatment and community…</p>
+            <p>Многие люди даже не задумываются, что его язык считается самым богатым.
+                Почему именно русский? Ответ очень прост, русский язык – это единственный
+                в мире язык, слова в котором могут пополняться снова и снова. Из многих
+                выражений и придуманных слов и пополняется наш язык, наша культура, ведь
+                многое, что было популярно у наших бабушек и дедушек переходит и в нашу
+                разговорную лексику, и наши внуки тоже будут говорить нашими фразами.
+                Русский язык очень сложный, но это не делает его менее привлекательным. Многие
+                писатели говорили, что на русском можно вести любую беседу: признание любви,
+                общение с врагом, дружеская беседа, ведь именно он может передать все чувства
+                и эмоции, лучше, чем какой-либо другой язык. Главное учиться быть грамотным
+                человеком, не стоит кричать на весь свет, что он слишком сложен и что
+                придумали слишком много дурацких правил.
+                Следует помнить, что язык, на котором мы говорим, это дар наших предков и не
+                учение языка – это равноценно забыть о родных, не принять их культуру, стать
+                чужим среди своих. Особенно печально это слышать от маленького, еще растущего
+                поколения. Они ведь еще не знают, что познав его, можно открыть для себя новый
+                мир. в русском языке существует множество слов синонимов, поэтому составлять
+                стихи не составит никого труда, подбирая нужное слово смысл его не поменяется.
+                Очень забавно узнавать новые слова, ведь слово означающий один предмет или
+                действие по звучанию может ассоциироваться совершенно с другим предметом.
+                Полюбив язык, он откроет для тебя множество возможностей, все это я проверила
+                на своем личном опыте. Прочитав большое количество книг, уже не вспоминаешь
+                о правилах, и свободно пишешь предложения, не делая никаких ошибок. Вот что
+                значит – богатый русский язык. Так что лучше беречь свой язык смолоду.
+                Источник: Сочинение рассуждение на тему Богатый русский язык</p>
+        </div>
+
+        <!--end-->
+    </div>
+    <th:block th:include="administration/fragments/scripts :: scripts"><!--scripts--></th:block>
+</div>
+</body>
+</html>

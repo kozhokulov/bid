@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Encode Sans Semi Expanded");
+@import url("https://fonts.googleapis.com/css?family=Kirang Haerang");
+* {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-size: 18px;
+}
+
+body {
+    height: auto;
+    width: 50vw;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.base-item {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.header {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 60px;
+    font-family: Kirang Haerang, sans-serif;
+    grid-template-areas:
+            "i n n"
+            "i g g";
+    text-transform: uppercase;
+}
+.header>span {
+    background-color: rgb(163, 154, 163);
+    height: 60px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    grid-area: i;
+}
+.header>p {
+    margin: auto 0 auto auto;
+    font-size: 100vb;
+    grid-area: g;
+    line-height: 100%;
+}
+.header>p:first-of-type {
+    grid-area: n;
+}
+
+.main {
+    font-family: Encode Sans Semi Expanded;
+}
+.main>div.ad-wrap {
+    height: 180px;
+    width: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.main>div.ad-wrap>div.advertisement {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    transition: 1s;
+    background-repeat: no-repeat;
+}
+
+/* Device = Tablets, Ipads (portrait) ### tab-p */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        width: 80vw;
+    }
+}
+
+/* Device = Tablets, Ipads (landscape) ### tab-l */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    body {
+        width: 60vw;
+    }
+}
+
+/* Device = Low Resolution Tablets, Mobiles (Landscape) ### mob-l */
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        width: 80vw;
+    }
+}
+
+/* Device = Most of the Smartphones Mobiles (Portrait) mob-p ### */
+@media (min-width: 320px) and (max-width: 480px) {
+    body {
+        width: 100vw;
+    }
+}

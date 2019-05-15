@@ -1,0 +1,55 @@
+.user-create-form {
+    border: 2px solid #28B463;
+}
+.user-create-form>form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+.user-create-form>form>input {
+    padding: 8px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 0;
+    border: 1px solid #222629;
+}
+.user-create-form>form>input[type="submit"] {
+    background-color: #222629;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+.user-create-form>form>input[type="submit"]:hover {
+    font-weight: bolder;
+}
+.user-create-form>form>input[type="password"] {
+    border-left: none;
+}
+
+.users-list {
+    width: 100%;
+    display: table;
+}
+.users-list>a {
+    display: table-row;
+    text-decoration: none;
+    color: rgba(3, 3, 3, .84);
+    line-height: 39px;
+    box-sizing: border-box;
+}
+.users-list>a:hover {
+    background-color: rgba(183, 181, 176, .4);
+}
+.users-list>a>span {
+    display: table-cell;
+    font-size: 20px;
+    text-align: center;
+}
+.users-list>a>span:first-of-type {
+    text-align: left;
+    margin-left: 6px;
+}
+.users-list>a>span:last-of-type {
+    text-align: right;
+    margin-right: 6px;
+}

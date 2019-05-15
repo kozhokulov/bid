@@ -1,0 +1,68 @@
+.ads-list>div.ad {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+.ads-list>div.ad>div {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+.ads-list>div.ad>form {
+    display: block;
+    height: 20px;
+    width: 100%;
+    position: static;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.ads-list>div.ad>form>input {
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    background-color: rgba(220, 0, 5, .50);
+    border: none;
+    cursor: pointer;
+}
+.ads-list>div.ad>form>input:hover {
+    background-color: rgba(220, 0, 5, .60);
+}
+
+.add-new {
+    border: 2px solid #28B463;
+}
+.add-new>form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.add-new>form>input {
+    padding: 8px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 0;
+    border: 1px solid #222629;
+}
+.add-new>form>input[type="submit"] {
+    background-color: #222629;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+.add-new>form>input[type="submit"]:hover {
+    font-weight: bolder;
+}
+.add-new>form>input[type="file"] {
+    padding: 5px;
+    display: inline-block;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, .7);
+}
+.add-new>form>input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}

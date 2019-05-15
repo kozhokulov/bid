@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="administration/fragments/head :: head">Layout head fragment</th:block>
+    <link rel="stylesheet" th:href="@{/administration/css/users.css}">
+</head>
+<body>
+<div class="wrapper">
+    <th:block th:replace="administration/fragments/nav :: nav"><!--nav--></th:block>
+    <div class="main">
+        <!--start-->
+
+        <div class="main-item message" th:if="${messages != null}" th:each="message : ${messages}">
+            <p th:text="${message}"></p>
+        </div>
+
+        <div class="main-item user-create-form">
+            <form th:action="@{/admin/user/new}" th:method="POST">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                <input type="text" placeholder="Username" th:name="username" required>
+                <input type="password" placeholder="Password" th:name="password">
+                <input type="submit" value="Create New User">
+            </form>
+        </div>
+
+        <div class="main-item users-list" th:if="${users != null}">
+            <th:block th:each="user : ${users}">
+                <a th:href="@{/admin/user/info(username=${user.getUsername()})}">
+                    <span th:text="${user.getUsername()}"></span>
+                    <span th:text="${user.getId()}"></span>
+                    <span th:text="${user.isEnabled() ? 'active' : 'blocked'}"></span>
+                    <span th:text="${user.getFullName()}"></span>
+                </a>
+            </th:block>
+        </div>
+        <div class="main-item" th:if="${users == null}">
+            <p>There is no users yet!</p>
+        </div>
+
+        <!--end-->
+    </div>
+    <th:block th:include="administration/fragments/scripts :: scripts"><!--scripts--></th:block>
+</div>
+</body>
+</html>

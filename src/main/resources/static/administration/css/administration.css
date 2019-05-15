@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Trebuchet MS, serif;
+}
+p {
+    font-size: 22px
+}
+body {
+    background-color: transparent;
+}
+.wrapper {
+    display: grid;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 4fr;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.main {
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+    box-sizing: border-box;
+    transition: .2s;
+    padding: 80px;
+    background-color: #FFFFFF;
+    color: black;
+    font-size: 16px;
+    z-index: 1;
+}
+.main::-webkit-scrollbar {
+    width: 10px;
+}
+.main::-webkit-scrollbar-track {
+    background: rgba(23, 32, 42, 1);
+}
+.main::-webkit-scrollbar-thumb {
+    background: rgba(33, 47, 60, 1);
+}
+.main::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, .4);
+}
+.main>div.main-item {
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+    border: none;
+}
+
+.main>div.message:last-of-type {
+    margin-bottom: 80px;
+}
+.main>div.message {
+    background-color: #D5F5E3;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.nav {
+    background-color: transparent;
+    transition: .6s;
+    display: grid;
+    grid-template-rows: auto;
+    z-index: 2;
+}
+.nav::-webkit-scrollbar {
+    width: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .4s;
+    color: #FCF3CF;
+    background-color: #222629;
+}
+.nav-item:hover {
+    transform: translate3d(0, 0, 10px) scale(1.2);
+    box-shadow: 0 0 20px rgba(3, 1, 1, .6);
+}
